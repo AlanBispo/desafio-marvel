@@ -1,0 +1,8 @@
+.personagem{
+    display: grid;
+    width: 300px;
+    margin:20px;
+    border-style:solid;
+    border-radius: 16px;
+    text-align:center;
+}
