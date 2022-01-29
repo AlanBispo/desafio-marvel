@@ -2,29 +2,38 @@ import styled from 'styled-components';
 
 export const Header = styled.header`
     width: 100%;
-    height: 30px;
-    background: rgb(8,4,70);
-    background: linear-gradient(90deg, rgba(8,4,70,1) 20%, rgba(247,0,38,1) 50%, rgba(8,4,70,1) 80%);
+    height: 10vh;
+    background-color: #1e1e1e;
     color: white;
+    display: flex;
+    justify-content: center;
 `
 export const NavItems = styled.div`
     display:flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 5px;
 `
 export const About = styled.div`
-    padding-left: 20px;
-
+   color: white;
 `
-export const Logo = styled.div`
-    margin-right:  20px;
-
+export const Logo = styled.img`
+    background-color: transparent;
+    color: transparent;
+    font-weight: bold;
+    width: 100px;
+    height: 35px;
+    margin: 0px 60px;
 `
 export const Icons = styled.div`
     display: grid;
     grid-gap: 8px;
     grid-template-columns: repeat(2, 1fr);
     margin-right: 10px;
-
+    font-size: 18px;
+    color: white;
+`
+export const Icon = styled.button`
+    color: white;
+    background-color: transparent;
+    border: none;
 `
