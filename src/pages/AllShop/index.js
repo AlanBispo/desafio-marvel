@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 
-import { Container, ShowComics } from "./styles";
+import { Container, Comics, ShowComics, Img } from "./styles";
 import Pagination from '../../components/Pagination';
+import Navbar from '../../components/Navbar'
 
 import axios from "axios";
 
@@ -12,9 +13,9 @@ const hash = "b5162ec8a8fe9eba16751f65e528f67b";
 
 const AllShop = () => {
     const [comics, setComics] = useState([])
-    const [itemsPerPage, setItemsPerPage] = useState(10)
+    const [itemsPerPage, setItemsPerPage] = useState(12)
     const [currentPage, setCurrentPage] = useState(0)
-
+    console.log(comics);
     const pages = Math.ceil(comics.length / itemsPerPage);
     const startIndex = currentPage * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
@@ -32,17 +33,17 @@ const AllShop = () => {
 
   return (
     <Container id="comics">
+      <Navbar/>
+      <Comics>
         {currentItems.map(comic =>
             <ShowComics key={comic.id}>
-                <h4>{comic.title}</h4>
-                <img src={comic.thumbnail.path+'.'+comic.thumbnail.extension} alt='thumbnail'></img>
+                <Img src={comic.thumbnail.path+'.'+comic.thumbnail.extension} alt='thumbnail'></Img>
+                <h4>{comic.title.length > 30 ? comic.title=comic.title.substring(0,30)+'...' : comic.title}</h4>
             </ShowComics>
         )}
-
-        <Pagination pages={pages} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
-
+      </Comics>
+      <Pagination pages={pages} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
     </Container>
-
   );
 };
 // 50921

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.main`
+  overflow: hidden;
   width: 100%;
   height: 100vh;
   background-color: #e1e1e1e1;
@@ -38,7 +39,6 @@ export const Title = styled.h1`
 export const Subtitle = styled.h2`
   color: red;
   font-size: 1.2rem;
-  margin-top: 30px;
 `;
 export const Button = styled.button`
   background-color: red;
@@ -48,6 +48,7 @@ export const Button = styled.button`
   border: 1px solid red;
   border-radius: 20px 0px 20px 0px;
   font-size: 1.2rem;
+  cursor: pointer;
 `;
 export const Footer = styled.footer`
   display: flex;
