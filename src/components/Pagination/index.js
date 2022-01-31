@@ -1,8 +1,8 @@
-import React from "react";
-
 import { Section, Button } from "./styles"
 
 const Pagination = ({ pages, currentPage, setCurrentPage }) => {
+  const next = (currentPage) => {
+    return currentPage + 1}
   return (
     <Section>
       {Array.from(Array(pages), (items, index) => {

@@ -1,21 +1,27 @@
-import Navbar from "../../components/Navbar";
+import { useNavigate } from 'react-router-dom'
 
-import { Container, Body, Shop, ShopItem } from "./styles";
-import { useCart } from "../../components/CartContext";
-import Product from "../../components/Product";
+import Navbar from "../../components/Navbar"
+import { useCart } from "../../components/CartContext"
+
+import { MdKeyboardBackspace } from "react-icons/md";
+import { Container, Body, Shop, ShopItem, ArrowLeft } from "./styles"
+
+
 
 const Cart = ({ products }) => {
-  const cart = useCart();
+  const navigate = useNavigate()
+  const cart = useCart()
   const remove = (id) => () => {
-    cart.removeFromCart(id);
+    cart.removeFromCart(id)
   };
-
+  console.log(cart.cart)
   return (
     <Container>
       <Navbar />
+      <ArrowLeft onClick={() => {navigate('/allshop')} }><MdKeyboardBackspace/></ArrowLeft>
+    
       {Object.keys(cart.cart).map((key) => {
-        console.log(cart.cart);
-        const product = cart.cart[key];
+        const product = cart.cart[key]
         return (
           <div key={key}>
             <h1>{product.title}</h1>

@@ -15,3 +15,9 @@ export const Shop = styled.div`
 export const ShopItem = styled.div`
 
 `
+export const ArrowLeft = styled.button`
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 28px;
+`

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+/* import { Link } from "react-router-dom"; */
 
 import axios from "axios";
 
@@ -31,19 +32,19 @@ const AllShop = () => {
         })
     }, []);
 
-
-
   return (
     <Container id="comics">
       <Navbar/>
       <Comics>
         {currentItems.map(comic =>
-          <Product comic={comic} key={comic.id}/>
+
+          <Product comic={comic} key={comic.id} />
+
         )}
       </Comics>
       <Pagination pages={pages} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
     </Container>
   );
 };
-// 50921
+
 export default AllShop;

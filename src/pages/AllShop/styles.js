@@ -12,9 +12,14 @@ export const Comics = styled.section`
     text-align: center;
     width: 90%;
     height: 100%;
-
+    @media screen and (min-width: 1000px) {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        width: 100%;
+    }
 `
 export const ShowComics = styled.div`
+    color: transparent;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -25,8 +30,7 @@ export const ShowComics = styled.div`
     border-radius: 16px;
     margin-left: 30px;
     text-align: center;
-    background-color: Salmon;
-    cursor: pointer;
+
 `
 export const Img = styled.img`
     height: 150px;
@@ -34,8 +38,11 @@ export const Img = styled.img`
     border-bottom-style: solid;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
+    cursor: pointer;
 
 `
 export const TitleImg = styled.h4`
     font-size: 1rem;
+    color: black;
+    cursor: pointer;
 `
