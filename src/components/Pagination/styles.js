@@ -9,8 +9,9 @@ export const Section = styled.section`
 
 `
 export const Button = styled.button`
-    width: 25px;
-    height: 25px;
+    background-color: transparent;
+    width: 15px;
+    height: 15px;
     border: none;
     cursor: pointer;
     &:not(:first-child){

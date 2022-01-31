@@ -1,0 +1,6 @@
+.menu {
+   display:block;
+}
+.menu.active{
+    display:none;
+}

@@ -1,11 +1,15 @@
-import { Header, NavItems, About, Logo, Icons, Icon } from "./styles";
-import { Link } from "react-router-dom";
+import { Header, NavItems, About, Logo, Icons, Icon } from "./styles"
+import { Link } from "react-router-dom"
+import { useCart } from "../CartContext"
 
-import { MdShoppingCart, MdLogin } from "react-icons/md";
+import { MdShoppingCart, MdLogin } from "react-icons/md"
 
-import logo from "../../assets/images/logo.svg";
+import logo from "../../assets/images/logo.svg"
 
 const Navbar = () => {
+  const cart = useCart()
+
+  const itemsCount = Object.values(cart.cart).reduce((acc, item) => (acc + item.quantity), 0)
   return (
     <Header>
       <NavItems>
@@ -18,9 +22,10 @@ const Navbar = () => {
         </Link>
 
         <Icons>
-          <Link to="/shop">
+          <Link to="/cart">
             <Icon>
               <MdShoppingCart  />
+              { itemsCount > 0 && <span>({itemsCount})</span>}
             </Icon>
           </Link>
           <Link to="/login">
