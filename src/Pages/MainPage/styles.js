@@ -9,15 +9,15 @@ export const Container = styled.main`
 `;
 export const Body = styled.section`
   width: 100%;
-  height: 75vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
 `;
 export const Img = styled.img`
-  height: 200px;
-  width: 300px;
+  height: 100%;
+  width: 100%;
 `;
 export const Box = styled.div`
   display: flex;
@@ -25,7 +25,7 @@ export const Box = styled.div`
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
-  width: 90%;
+  width: 100%;
   height: 100%;
   flex-wrap: wrap;
   border: 1px solid transparent;

@@ -1,28 +1,93 @@
+import { useNavigate } from "react-router-dom";
+
 import { useProduto } from "../../components/DescriptionContext";
+import { useCart } from "../../components/CartContext";
+
 import Navbar from "../../components/Navbar";
 
-import { Container, DescriptionItem } from "./styles";
+import { MdShoppingCart } from "react-icons/md";
+
+import {
+  DescriptionMain,
+  DescriptionComic,
+  DescriptionItem,
+  ArrowLeft,
+  Title,
+  Img,
+  Creators,
+  Price,
+  Span,
+  CreatorsTitle,
+  Button,
+  Descricao
+} from "./styles";
+import { MdKeyboardBackspace } from "react-icons/md";
 
 const Description = () => {
-  const produto = useProduto();
+  const navigate = useNavigate(); // retornar à pagina anterior
+  const cart = useCart();
+  const produto = useProduto(); // produto resgatar o array com o produto
+  const add = (comic) => () => {
+    cart.addToCart(comic);
+  };
+
+  const product = produto.produto; // variavel para pegar o produto
+  const price = product.prices.price; // variavel para pegar o preço do produto
+  console.log(product.description);
   return (
-    <Container>
+    <DescriptionMain>
       <Navbar />
-      <DescriptionItem>
-        {Object.keys(produto.produto).map((key) => {
-          const product = produto.produto[key]
-          return (
-            <div key={key}>
-              <h1>{product.title}</h1>
-              <img
-                src={product.thumbnail.path + "." + product.thumbnail.extension}
-                alt="img-hq"
-              />
-            </div>
-          );
-        })}
-      </DescriptionItem>
-    </Container>
+      <ArrowLeft
+        onClick={() => {
+          navigate("/allshop");
+        }}
+      >
+        <MdKeyboardBackspace />
+      </ArrowLeft>
+      <DescriptionComic>
+        <DescriptionItem>
+          <Title>{product.title}</Title>
+          <Img
+            src={product.thumbnail.path + "." + product.thumbnail.extension}
+            alt={product.title}
+          />
+          <Creators>
+            <CreatorsTitle>
+              {product.creators.items.length > 1 ? "Criadores: " : "Criador: "}{" "}
+              <br />
+            </CreatorsTitle>
+            {Object.keys(product.creators.items).map((key) => {
+              const items = product.creators.items;
+              return (
+                <Span>
+                  {items[key].name}
+                  <br />
+                </Span>
+              );
+            })}
+          </Creators>
+
+          <Descricao>
+            <Title>Descricao</Title>
+            <Span>{product.description ? product.description : 'Desculpe, esse produto não tem descrição! :(' }</Span>
+          </Descricao>
+
+          {Object.keys(product.prices).map((key) => {
+            const prices = product.prices;
+            return (
+              <Price>
+                <Span>Valor: R$ {prices[key].price}</Span>
+              </Price>
+            );
+          })}
+
+          <Button onClick={add(produto.produto)}>
+            Adicionar ao Carrinho
+            <MdShoppingCart size={18} />
+          </Button>
+        </DescriptionItem>
+      </DescriptionComic>
+    </DescriptionMain>
   );
 };
 

@@ -1,4 +1,4 @@
-import { Header, NavItems, About, Logo, Icons, Icon } from "./styles"
+import { Header, NavItems, About, Logo, Icons, Icon, Count } from "./styles"
 import { Link } from "react-router-dom"
 import { useCart } from "../CartContext"
 
@@ -24,9 +24,11 @@ const Navbar = () => {
         <Icons>
           <Link to="/cart">
             <Icon>
-              <MdShoppingCart  />
-              { itemsCount > 0 && <span>({itemsCount})</span>}
+              <MdShoppingCart  />{ itemsCount > 0 && <Count>{itemsCount}</Count>}
             </Icon>
+
+
+
           </Link>
           <Link to="/login">
             <Icon>

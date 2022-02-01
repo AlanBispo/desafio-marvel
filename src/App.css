@@ -12,10 +12,4 @@ body{
     list-style-type: none;
     font-family: 'Roboto', sans-serif;
 }
-img{
-    width: 100px;
-    height: 150px;
-    border-bottom-style: solid;
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
-}
+

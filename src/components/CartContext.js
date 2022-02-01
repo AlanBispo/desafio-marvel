@@ -9,18 +9,19 @@ export const CartProvider = ({ children }) => {
     const cartLocal = window.localStorage.getItem("cart");
     if (cartLocal) {
       setCart(JSON.parse(cartLocal))
-      console.log(cart);
     }
   }, []);
 
   const addToCart = (product) => {
+    
     setCart((old) => {
+
         let quantity = (old[product.id]?.quantity || 0) + 1
       const newCart = {
         ...old,
         [product.id]: {
           ...product,
-          quantity
+          quantity,
         },
       };
       window.localStorage.setItem("cart", JSON.stringify(newCart));

@@ -6,17 +6,16 @@ export const DescriptionContext = createContext();
 export const DescriptionProvider = ({ children }) => {
   const [produto, setProduto] = useState({});
 
-  /* useEffect(() => {
-    const cartLocal = window.localStorage.getItem("cart");
+  useEffect(() => {
+    const cartLocal = window.localStorage.getItem("produto");
     if (cartLocal) {
-      setCart(JSON.parse(cartLocal))
+      setProduto(JSON.parse(cartLocal))
     }
-  }, []); */
+  }, []);
 
   const addToDescription = (product) => {
-    setProduto(() => ({
-      [product.id]: product
-    }))
+    setProduto(product)
+    window.localStorage.setItem("produto", JSON.stringify(produto));
   };
   return (
     <DescriptionContext.Provider value={{ produto, addToDescription }}>

@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom'
 
 import Navbar from "../../components/Navbar"
 import { useCart } from "../../components/CartContext"
+import { useProduto } from "../../components/DescriptionContext";
 
 import { MdKeyboardBackspace } from "react-icons/md";
 import { Container, Body, Shop, ShopItem, ArrowLeft } from "./styles"
@@ -14,12 +15,12 @@ const Cart = ({ products }) => {
   const remove = (id) => () => {
     cart.removeFromCart(id)
   };
-  console.log(cart.cart)
+
   return (
     <Container>
       <Navbar />
-      <ArrowLeft onClick={() => {navigate('/allshop')} }><MdKeyboardBackspace/></ArrowLeft>
-    
+      <ArrowLeft onClick={() => {navigate('/description')} }><MdKeyboardBackspace/></ArrowLeft>
+
       {Object.keys(cart.cart).map((key) => {
         const product = cart.cart[key]
         return (

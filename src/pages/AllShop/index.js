@@ -37,9 +37,7 @@ const AllShop = () => {
       <Navbar/>
       <Comics>
         {currentItems.map(comic =>
-
           <Product comic={comic} key={comic.id} />
-
         )}
       </Comics>
       <Pagination pages={pages} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
