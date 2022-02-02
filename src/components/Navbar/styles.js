@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Header = styled.header`
     width: 100%;
     height: 10vh;
-    background-color: #ff3333;
+    background-color: #e51e25;
     color: white;
     display: flex;
 `
@@ -50,6 +50,9 @@ export const Icon = styled.button`
     cursor: pointer;
     @media screen and (min-width: 484px) {
         font-size: 22px;
+    }
+    @media screen and (min-width: 768px) {
+        font-size: 24px;
     }
 `
 export const Count = styled.span`

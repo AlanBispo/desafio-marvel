@@ -1,19 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
 
-import { ShowComics, Img, TitleImg } from "../pages/AllShop/styles";
-import { useProduto } from "./DescriptionContext";
-import { useCart } from "./CartContext"
+import { ShowComics, Img, TitleImg } from "../pages/AllShop/styles"
+import { useProduto } from "./DescriptionContext"
+
 
 const Product = ({ comic }) => {
-  const cart = useCart()
   const produto = useProduto();
   const list = (comic) => () => {
     produto.addToDescription(comic);
   };
-  const add = (comic) => () => {
-    cart.addToCart(comic);
-  };
-
   const titulo = comic.title
 
   return (
@@ -24,10 +19,10 @@ const Product = ({ comic }) => {
           src={comic.thumbnail.path + "." + comic.thumbnail.extension}
           alt="thumbnail"
         ></Img>
-      </Link>
-      <TitleImg onClick={add(comic)} >
+      <TitleImg >
         {titulo.length > 30 ? titulo.substring(0, 30)+'...' : titulo}
       </TitleImg>
+      </Link>
     </ShowComics>
   );
 };

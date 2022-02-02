@@ -13,10 +13,9 @@ export const CartProvider = ({ children }) => {
   }, []);
 
   const addToCart = (product) => {
-    
-    setCart((old) => {
 
-        let quantity = (old[product.id]?.quantity || 0) + 1
+    setCart((old) => {
+      let quantity = (old[product.id]?.quantity || 0) + 1
       const newCart = {
         ...old,
         [product.id]: {

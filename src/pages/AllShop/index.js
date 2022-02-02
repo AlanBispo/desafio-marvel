@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 import axios from "axios";
 
-import { Container, Comics} from "./styles";
+import { Container, Comics, Title} from "./styles";
 import Pagination from '../../components/Pagination';
 import Navbar from '../../components/Navbar'
 import Product from '../../components/Product'
@@ -35,6 +35,7 @@ const AllShop = () => {
   return (
     <Container id="comics">
       <Navbar/>
+      <Title>Todos os produtos</Title>
       <Comics>
         {currentItems.map(comic =>
           <Product comic={comic} key={comic.id} />

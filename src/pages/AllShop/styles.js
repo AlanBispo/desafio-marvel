@@ -10,36 +10,42 @@ export const Comics = styled.section`
     flex-wrap: wrap;
     align-items: center;
     text-align: center;
-    width: 90%;
+    justify-content: center;
+    width: 100%;
     height: 100%;
     @media screen and (min-width: 1000px) {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        width: 100%;
+
     }
 `
 export const ShowComics = styled.div`
     color: transparent;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    margin-top: 30px;
-    height: 210px;
-    width: 150px;
+    margin: 30px 10px 0px 10px;
+    height: 240px;
+    width: 160px;
     border: 1px solid black;
-    border-radius: 16px;
-    margin-left: 30px;
+    border-radius: 10px;
+    @media screen and (min-width: 1000px) {
+        margin: 30px 10px 0px 40px;
+    }
+`
+export const Title = styled.h1`
+    font-size: 1.4rem;
     text-align: center;
-
+    margin-top: 15px;
+    @media screen and (min-width: 1000px) {
+        font-size: 1.8rem;
+    }
 `
 export const Img = styled.img`
-    height: 150px;
-    width: 150px;
-    border-bottom-style: solid;
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
+    height: 180px;
+    width: 160px;
     cursor: pointer;
-
+    color: transparent;
+    border: 1px solid black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 `
 export const TitleImg = styled.h4`
     font-size: 1rem;

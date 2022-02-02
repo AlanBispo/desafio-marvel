@@ -53,12 +53,13 @@ export const Button = styled.button`
     align-items: center;
     width: 180px;
     height: 50px;
-    background-color: #ff3333;
+    background-color: #e51e25;
     border: none;
     border-radius: 10px;
     color: white;
     margin: 40px 0px;
     cursor: pointer;
+    transition-delay: 100ms;
     &:hover{
         opacity: 0.8;
     }

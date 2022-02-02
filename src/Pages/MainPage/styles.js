@@ -15,9 +15,8 @@ export const Body = styled.section`
   overflow: hidden;
 `;
 export const Img = styled.img`
-  height: 100%;
+  height: 80%;
   width: 100%;
-  background-image: url("../../assets/images/marvel.jpeg");
 `;
 export const Box = styled.div`
   display: flex;
@@ -32,17 +31,22 @@ export const Box = styled.div`
   border-radius: 10px;
 `;
 export const Button = styled.button`
-  background-color: red;
+  background-color: #e51e25;
   color: white;
   width: 150px;
   height: 50px;
-  border: 1px solid red;
+  border: 1px solid #e51e25;
   border-radius: 20px 0px 20px 0px;
   font-size: 1.2rem;
   cursor: pointer;
   position: absolute;
   bottom: 20%;
   right: 30%;
+  transition-delay: 200ms;
+  &:hover{
+    background-color:#e73238;
+    border: 1px solid #e73238;
+  }
   @media screen and (min-width: 484px){
     bottom: 20%;
     right: 35%;
@@ -61,6 +65,6 @@ export const Footer = styled.footer`
   width: 100%;
   position: absolute;
   bottom: 0;
-  background-color: #ff3333;
+  background-color: #e51e25;
   color: white;
 `;

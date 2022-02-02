@@ -33,7 +33,7 @@ const Description = () => {
 
   const product = produto.produto; // variavel para pegar o produto
   const price = product.prices.price; // variavel para pegar o preço do produto
-  
+
   return (
     <DescriptionMain>
       <Navbar />
@@ -68,15 +68,15 @@ const Description = () => {
           </Creators>
 
           <Descricao>
-            <Title>Descricao</Title>
+            <Title>Descrição:</Title>
             <Span>{product.description ? product.description : 'Desculpe, esse produto não tem descrição! :(' }</Span>
           </Descricao>
 
           {Object.keys(product.prices).map((key) => {
-            const prices = product.prices;
+            const price = product.prices;
             return (
               <Price>
-                <Span>Valor: R$ {prices[key].price}</Span>
+                <Span>Valor: R$ {price[key].price}</Span>
               </Price>
             );
           })}
