@@ -4,7 +4,6 @@ export const Container = styled.main`
   overflow: hidden;
   width: 100%;
   height: 100vh;
-  background-color: #e1e1e1e1;
   color: black;
 `;
 export const Body = styled.section`
@@ -18,6 +17,7 @@ export const Body = styled.section`
 export const Img = styled.img`
   height: 100%;
   width: 100%;
+  background-image: url("../../assets/images/marvel.jpeg");
 `;
 export const Box = styled.div`
   display: flex;
@@ -31,15 +31,6 @@ export const Box = styled.div`
   border: 1px solid transparent;
   border-radius: 10px;
 `;
-export const Title = styled.h1`
-  color: red;
-  font-size: 1.8rem;
-  margin-top: 30px;
-`;
-export const Subtitle = styled.h2`
-  color: red;
-  font-size: 1.2rem;
-`;
 export const Button = styled.button`
   background-color: red;
   color: white;
@@ -49,6 +40,17 @@ export const Button = styled.button`
   border-radius: 20px 0px 20px 0px;
   font-size: 1.2rem;
   cursor: pointer;
+  position: absolute;
+  bottom: 20%;
+  right: 30%;
+  @media screen and (min-width: 484px){
+    bottom: 20%;
+    right: 35%;
+  }
+  @media screen and (min-width: 768px){
+    bottom: 20%;
+    right: 45%;
+  }
 `;
 export const Footer = styled.footer`
   display: flex;
@@ -59,6 +61,6 @@ export const Footer = styled.footer`
   width: 100%;
   position: absolute;
   bottom: 0;
-  background-color: #1e1e1e;
+  background-color: #ff3333;
   color: white;
 `;

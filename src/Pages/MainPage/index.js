@@ -6,14 +6,13 @@ import {
   Container,
   Body,
   Box,
-  Title,
   Button,
-  Subtitle,
   Footer,
   Img,
 } from "./styles";
 
 import Marvel from "../../assets/images/marvel.jpeg"
+import MarvelSmall from "../../assets/images/marvel-small.jpeg"
 
 const MainPage = () => {
   return (
@@ -22,8 +21,8 @@ const MainPage = () => {
       <Body>
         <Box>
 
-          <Img src={Marvel}></Img>
-          
+          <Img src={MarvelSmall} srcSet={`${Marvel} 768px, ${MarvelSmall} 300px`}></Img>
+
           <Link to="/allshop">
             <Button>Ver Tudo</Button>
           </Link>

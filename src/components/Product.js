@@ -14,6 +14,8 @@ const Product = ({ comic }) => {
     cart.addToCart(comic);
   };
 
+  const titulo = comic.title
+
   return (
     //comic = results
     <ShowComics >
@@ -24,10 +26,7 @@ const Product = ({ comic }) => {
         ></Img>
       </Link>
       <TitleImg onClick={add(comic)} >
-        {/* {comic.title.length > 30
-          ? (comic.title = comic.title.substring(0, 30) + "...")
-          : comic.title}{" "} */}
-          {comic.title}
+        {titulo.length > 30 ? titulo.substring(0, 30)+'...' : titulo}
       </TitleImg>
     </ShowComics>
   );

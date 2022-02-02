@@ -33,7 +33,7 @@ const Description = () => {
 
   const product = produto.produto; // variavel para pegar o produto
   const price = product.prices.price; // variavel para pegar o preço do produto
-  console.log(product.description);
+  
   return (
     <DescriptionMain>
       <Navbar />

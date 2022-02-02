@@ -3,11 +3,9 @@ import styled from 'styled-components';
 export const Header = styled.header`
     width: 100%;
     height: 10vh;
-    background-color: #1e1e1e;
+    background-color: #ff3333;
     color: white;
     display: flex;
-
-
 `
 export const NavItems = styled.div`
     width: 100%;
@@ -56,7 +54,6 @@ export const Icon = styled.button`
 `
 export const Count = styled.span`
     position: absolute;
-    z-index: 99;
     font-size: 1rem;
-    color:red;
+    color:white;
 `

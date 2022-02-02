@@ -2,10 +2,12 @@ import styled from "styled-components";
 
 export const DescriptionMain = styled.main`
     width: 100%;
-    min-height: 100vh;
+    height: 100%;
 `
 export const ArrowLeft = styled.button`
     background-color: transparent;
+    position: absolute;
+    margin: 10px 0px 0px 10px;
     border: none;
     cursor: pointer;
     font-size: 28px;
@@ -25,7 +27,7 @@ export const DescriptionItem = styled.div`
 `
 export const Title = styled.h1`
     font-size: 1.5rem;
-    margin: 20px 0px 30px 0px;
+    margin: 50px 0px 30px 0px;
 `
 export const Img = styled.img`
     width: 200px;
@@ -62,5 +64,5 @@ export const Button = styled.button`
     }
 `
 export const Descricao = styled.div`
-    
+
 `
