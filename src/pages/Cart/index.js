@@ -118,7 +118,7 @@ const Cart = () => {
               );
             })}
             <SubTotal>
-              <label htmlFor='cup'>Cupom de desconto:
+              <label htmlFor='cup'>Cupom de desconto: <br/>
               <Input type="text"
               placeholder="digite um cupom válido"
               id="cup"

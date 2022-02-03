@@ -86,7 +86,7 @@ export const Price = styled.span`
 `
 export const SubTotal = styled.section`
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     padding-right: 20px;
     font-size: 1.1rem;
     font-weight: bold;
@@ -106,12 +106,19 @@ export const ButtonTotal = styled.button`
     cursor: pointer;
 `
 export const Input = styled.input`
-
-margin: 0px 0px 15px 10px;
+    margin: 10px 0px 15px 10px;
     width: 150px;
-    height: 25px;
+    height: 27px;
     &focus{
         border: 0.1px solid #1e1e1e;
+    }
+    @media screen and (min-width: 768px){
+        width: 160px;
+        height: 30px;
+    }
+    @media screen and (min-width: 1000px){
+        width: 170px;
+        height: 35px;
     }
 `
 export const Vazio = styled.div`
