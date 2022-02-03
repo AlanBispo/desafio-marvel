@@ -52,7 +52,7 @@ const Cart = () => {
     Cupons.map((key) => {
       if(key === cupom){
         bool = true
-        total = subTotal*0.2
+        total = subTotal-(subTotal*0.2)
       }
       return total
     })
