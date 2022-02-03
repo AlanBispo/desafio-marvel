@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.main`
-    min-height: 100vh;
+    height: 100%;
     width: 100%;
 `
 export const Body = styled.section`
@@ -11,6 +11,7 @@ export const Body = styled.section`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 50px;
 `
 export const Menu = styled.section`
     width: 80%;
@@ -24,25 +25,26 @@ export const Span = styled.span`
 export const Shop = styled.div`
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 80%;
     height: 100%;
 `
 export const ShopItem = styled.div`
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     margin: 20px 0px;
-
 `
 export const ArrowLeft = styled.button`
     background-color: transparent;
     border: none;
     cursor: pointer;
     font-size: 28px;
+    position: absolute;
+    margin: 10px;
 `
 export const ImgTitle = styled.div`
     display: flex;
     flex-direction: column;
-    padding-left: 10px;
 `
 export const Title = styled.h1`
     font-size: 1.1rem;
@@ -56,13 +58,13 @@ export const Img = styled.img`
     justify-content: center;
     text-align: center;
 `
-export const Button = styled.button`
+export const ButtonRemove = styled.button`
     width: 60px;
     height: 30px;
     border: none;
     background-color: transparent;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin-top: 10px;
     &:hover{
         text-decoration: underline;
@@ -70,15 +72,55 @@ export const Button = styled.button`
     &:active{
         text-decoration: underline;
     }
+    @media screen and (min-width: 768px){
+        font-size: 1.2rem;
+    }
 `
 export const Quantity = styled.span`
     display: flex;
     align-items: center;
-    padding-left: 30px;
-
 `
 export const Price = styled.span`
     display: flex;
     align-items: center;
-    padding-left: 80px;
+`
+export const SubTotal = styled.section`
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    @media screen and (min-width: 768px){
+        font-size: 1.2rem;
+    }
+`
+export const ButtonTotal = styled.button`
+    width: 140px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: #e51e25;
+    color: white;
+    margin: 30px 0px;
+    font-size: 1rem;
+    cursor: pointer;
+`
+export const Input = styled.input`
+
+margin: 0px 0px 15px 10px;
+    width: 150px;
+    height: 25px;
+    &focus{
+        border: 0.1px solid #1e1e1e;
+    }
+`
+export const Vazio = styled.div`
+    display: flex;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    @media screen and (min-width: 768px){
+        font-size: 1.3rem;
+    }
 `

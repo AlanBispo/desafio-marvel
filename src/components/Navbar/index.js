@@ -26,9 +26,6 @@ const Navbar = () => {
             <Icon>
               <MdShoppingCart  />{ itemsCount > 0 && <Count>{itemsCount}</Count>}
             </Icon>
-
-
-
           </Link>
           <Link to="/login">
             <Icon>

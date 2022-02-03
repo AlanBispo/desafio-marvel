@@ -4,8 +4,11 @@ import MainPage from './pages/MainPage';
 import AllShop from './pages/AllShop';
 import Cart from './pages/Cart';
 import Description from './pages/Description';
+import About from './pages/About'
+
 import { CartProvider } from './components/CartContext'
 import { DescriptionProvider } from './components/DescriptionContext'
+
 
 import './App.css';
 
@@ -19,6 +22,7 @@ const App = () => {
             <Route path="/allshop" element={<AllShop />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/description" element={<Description />} />
+            <Route path="/about" element={<About />} />
           </Routes>
         </Router>
       </DescriptionProvider>

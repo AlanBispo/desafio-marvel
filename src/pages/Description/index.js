@@ -30,10 +30,7 @@ const Description = () => {
   const add = (comic) => () => {
     cart.addToCart(comic);
   };
-
   const product = produto.produto; // variavel para pegar o produto
-  const price = product.prices.price; // variavel para pegar o preço do produto
-
   return (
     <DescriptionMain>
       <Navbar />

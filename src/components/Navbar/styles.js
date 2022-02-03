@@ -36,7 +36,7 @@ export const Logo = styled.img`
 `
 export const Icons = styled.div`
     display: grid;
-    grid-gap: 13px;
+    grid-gap: 15px;
     grid-template-columns: repeat(2, 1fr);
     margin-right: 15px;
     color: white;
@@ -59,4 +59,5 @@ export const Count = styled.span`
     position: absolute;
     font-size: 1rem;
     color:white;
+    font-weight: bold;
 `

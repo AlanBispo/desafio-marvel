@@ -8,14 +8,16 @@ export const Container = styled.main`
 `;
 export const Body = styled.section`
   width: 100%;
-  height: 100%;
+  height: 80vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+
 `;
 export const Img = styled.img`
-  height: 80%;
+  height: 100%;
   width: 100%;
 `;
 export const Box = styled.div`
@@ -47,24 +49,13 @@ export const Button = styled.button`
     background-color:#e73238;
     border: 1px solid #e73238;
   }
-  @media screen and (min-width: 484px){
-    bottom: 20%;
-    right: 35%;
-  }
+
   @media screen and (min-width: 768px){
+    bottom: 25%;
+    right: 40%;
+  }
+  @media screen and (min-width: 1024px){
     bottom: 20%;
     right: 45%;
   }
-`;
-export const Footer = styled.footer`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 10vh;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  background-color: #e51e25;
-  color: white;
 `;

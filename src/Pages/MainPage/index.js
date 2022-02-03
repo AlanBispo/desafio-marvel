@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom"
 
 import Navbar from "../../components/Navbar"
+import Footer from "../../components/Footer"
 
 import {
   Container,
   Body,
   Box,
   Button,
-  Footer,
   Img,
 } from "./styles";
 
@@ -19,20 +19,14 @@ const MainPage = () => {
     <Container>
       <Navbar />
       <Body>
-
         <Box>
           <Img src={MarvelSmall} srcSet={`${Marvel} 768px, ${MarvelSmall} 300px`}/>
-
           <Link to="/allshop">
             <Button>Ver Tudo</Button>
           </Link>
         </Box>
       </Body>
-      <Footer>
-        © Todos os direitos para Marvel Studios
-        <br />
-        By: Alandelon Bispo
-      </Footer>
+      <Footer />
     </Container>
   );
 };
