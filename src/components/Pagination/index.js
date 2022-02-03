@@ -1,8 +1,6 @@
-import { Section, Button } from "./styles"
+import { Section, Button } from "./styles";
 
 const Pagination = ({ pages, currentPage, setCurrentPage }) => {
-  const next = (currentPage) => {
-    return currentPage + 1}
   return (
     <Section>
       {Array.from(Array(pages), (items, index) => {
@@ -10,7 +8,11 @@ const Pagination = ({ pages, currentPage, setCurrentPage }) => {
           <Button
             key={index}
             ClassName="pagination"
-            style={ index === currentPage ? {textDecoration: "underline", fontWeight: "bold" } : null}
+            style={
+              index === currentPage
+                ? { textDecoration: "underline", fontWeight: "bold" }
+                : null
+            }
             value={index}
             onClick={(e) => setCurrentPage(Number(e.target.value))}
           >

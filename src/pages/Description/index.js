@@ -19,7 +19,7 @@ import {
   Span,
   CreatorsTitle,
   Button,
-  Descricao
+  Descricao,
 } from "./styles";
 import { MdKeyboardBackspace } from "react-icons/md";
 
@@ -66,7 +66,11 @@ const Description = () => {
 
           <Descricao>
             <Title>Descrição:</Title>
-            <Span>{product.description ? product.description : 'Desculpe, esse produto não tem descrição! :(' }</Span>
+            <Span>
+              {product.description
+                ? product.description
+                : "Desculpe, esse produto não tem descrição! :("}
+            </Span>
           </Descricao>
 
           {Object.keys(product.prices).map((key) => {

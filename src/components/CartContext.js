@@ -8,14 +8,13 @@ export const CartProvider = ({ children }) => {
   useEffect(() => {
     const cartLocal = window.localStorage.getItem("cart");
     if (cartLocal) {
-      setCart(JSON.parse(cartLocal))
+      setCart(JSON.parse(cartLocal));
     }
   }, []);
 
   const addToCart = (product) => {
-
     setCart((old) => {
-      let quantity = (old[product.id]?.quantity || 0) + 1
+      let quantity = (old[product.id]?.quantity || 0) + 1;
       const newCart = {
         ...old,
         [product.id]: {
@@ -33,8 +32,8 @@ export const CartProvider = ({ children }) => {
     Object.keys(cart).forEach((id) => {
       if (id !== productId) {
         newCart[id] = cart[id];
-      } else if(cart[id].quantity > 1){
-          newCart[id] = {...cart[id], quantity: cart[id].quantity-1 }
+      } else if (cart[id].quantity > 1) {
+        newCart[id] = { ...cart[id], quantity: cart[id].quantity - 1 };
       }
       setCart(newCart);
       window.localStorage.setItem("cart", JSON.stringify(newCart));

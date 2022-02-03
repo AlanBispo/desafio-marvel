@@ -9,12 +9,12 @@ export const DescriptionProvider = ({ children }) => {
   useEffect(() => {
     const cartLocal = window.localStorage.getItem("produto");
     if (cartLocal) {
-      setProduto(JSON.parse(cartLocal))
+      setProduto(JSON.parse(cartLocal));
     }
   }, []);
 
   const addToDescription = (product) => {
-    setProduto(product)
+    setProduto(product);
     window.localStorage.setItem("produto", JSON.stringify(produto));
   };
   return (
@@ -25,6 +25,6 @@ export const DescriptionProvider = ({ children }) => {
 };
 
 export const useProduto = () => {
-    const produto = useContext(DescriptionContext);
-    return produto;
-  };
+  const produto = useContext(DescriptionContext);
+  return produto;
+};

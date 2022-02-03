@@ -14,7 +14,6 @@ export const Body = styled.section`
   justify-content: center;
   align-items: center;
   overflow: hidden;
-
 `;
 export const Img = styled.img`
   height: 100%;
@@ -45,16 +44,16 @@ export const Button = styled.button`
   bottom: 20%;
   right: 30%;
   transition-delay: 200ms;
-  &:hover{
-    background-color:#e73238;
+  &:hover {
+    background-color: #e73238;
     border: 1px solid #e73238;
   }
 
-  @media screen and (min-width: 768px){
+  @media screen and (min-width: 768px) {
     bottom: 25%;
     right: 40%;
   }
-  @media screen and (min-width: 1024px){
+  @media screen and (min-width: 1024px) {
     bottom: 20%;
     right: 45%;
   }
