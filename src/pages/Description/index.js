@@ -5,7 +5,7 @@ import { useCart } from "../../components/CartContext";
 
 import Navbar from "../../components/Navbar";
 
-import { MdShoppingCart } from "react-icons/md";
+import { MdShoppingCart, MdKeyboardBackspace } from "react-icons/md";
 
 import {
   DescriptionMain,
@@ -21,7 +21,7 @@ import {
   Button,
   Descricao,
 } from "./styles";
-import { MdKeyboardBackspace } from "react-icons/md";
+
 
 const Description = () => {
   const navigate = useNavigate(); // retornar à pagina anterior

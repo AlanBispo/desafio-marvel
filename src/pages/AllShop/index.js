@@ -35,7 +35,7 @@ const AllShop = () => {
   return (
     <Container id="comics">
       <Navbar/>
-      <Title>Todos os produtos</Title>
+      <Title>TODOS OS PRODUTOS</Title>
       <Comics>
         {currentItems.map(comic =>
           <Product comic={comic} key={comic.id} />

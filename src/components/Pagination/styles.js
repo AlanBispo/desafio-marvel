@@ -3,9 +3,11 @@ import styled from "styled-components";
 export const Section = styled.section`
   display: flex;
   width: 100%;
+  height: 10px;
   align-items: center;
   justify-content: center;
-  margin: 30px 0px;
+  margin-top: 40px;
+  padding-bottom: 30px;
 `;
 export const Button = styled.button`
   background-color: transparent;
