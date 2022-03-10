@@ -26,7 +26,7 @@ const MainPage = () => {
             }
                  
           <Link to="/allshop">
-            <Button>Ver Tudo</Button>
+            <Button>Ver Produtos</Button>
           </Link>
         </Box>
       </Body>
