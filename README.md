@@ -6,7 +6,7 @@ https://marvel-alan.netlify.app
 # Sobre o projeto
 
 A aplicação consome a API pública da Marvel para realizar a listagem dos quadrinhos disponiveis na API, junto com suas informações disponibilizadas.
-OBS: Por ser uma API em fase BETA, alguns titulos listados não apresentão foto (por isso aparece "image not found"), assim como alguns não tem descrição (coloquei uma frase caso isso aconteça). 
+OBS: Por ser uma API em fase BETA, alguns titulos listados não apresentam foto (por isso aparece "image not found"), assim como alguns não tem descrição (coloquei uma frase caso isso aconteça). 
 Estou aberto para qualquer sugestão de melhoria!
 
 # Tecnologias utilizadas
