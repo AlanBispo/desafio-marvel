@@ -15,7 +15,7 @@ const MainPage = () => {
       <Navbar />
       <Body>
         <Box>
-            { window.screen.width <= 400 ? 
+            { window.screen.width <= 450 ? 
               <Img
                 src={small}
               />
