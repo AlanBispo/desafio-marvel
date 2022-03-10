@@ -1,7 +1,7 @@
 #  
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/AlanBispo/desafio-marvel/blob/main/LICENSE) 
 
-https://marvel-alan.netlify.app
+https://marvel-hq.netlify.app
 
 # Sobre o projeto
 
@@ -28,7 +28,7 @@ Lista de cupoms (20%OFF):
     "OFERTA",
     "HQMARVEL"
  
- Link para acessar: https://marvel-alan.netlify.app
+ Link para acessar: https://marvel-hq.netlify.app
 
 # Autor
 
