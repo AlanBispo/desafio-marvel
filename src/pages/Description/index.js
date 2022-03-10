@@ -31,6 +31,7 @@ const Description = () => {
     cart.addToCart(comic);
   };
   const product = produto.produto; // variavel para pegar o produto
+  console.log(product);
   return (
     <DescriptionMain>
       <Navbar />

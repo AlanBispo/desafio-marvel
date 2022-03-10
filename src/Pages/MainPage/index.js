@@ -5,19 +5,26 @@ import Footer from "../../components/Footer";
 
 import { Container, Body, Box, Button, Img } from "./styles";
 
-import Marvel from "../../assets/images/marvel.jpg";
-import MarvelSmall from "../../assets/images/marvel-small.jpg";
+import small from "../../assets/images/marvel-small.jpg";
+import large from "../../assets/images/marvel-large.jpg";
 
 const MainPage = () => {
+  console.log(window.screen.width)
   return (
     <Container>
       <Navbar />
       <Body>
         <Box>
-          <Img
-            src={MarvelSmall}
-            srcSet={`${Marvel} 768px, ${MarvelSmall} 300px`}
-          />
+            { window.screen.width <= 400 ? 
+              <Img
+                src={small}
+              />
+              : 
+              <Img
+                src={large}
+              />
+            }
+                 
           <Link to="/allshop">
             <Button>Ver Tudo</Button>
           </Link>

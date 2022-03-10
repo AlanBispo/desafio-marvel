@@ -23,13 +23,13 @@ const Product = ({ comic }) => {
     cart.addToCart(comic);
   };
   const titulo = comic.title;
-
+  console.log(produto.produto)
+  
   return (
     //comic = results
-    <ShowComics>
+    <ShowComics onClick={list(comic)}>
       <Link to="/description">
         <Img
-          onClick={list(comic)}
           src={comic.thumbnail.path + "." + comic.thumbnail.extension}
           alt="thumbnail"
         />
@@ -47,13 +47,11 @@ const Product = ({ comic }) => {
               return <TitleImg key={key}>Valor: R$ {price[key].price}</TitleImg>;
             })}
           </>
-          <Button onClick={add(produto.produto)}>
+          <Button onClick={list(comic) && add(comic)}>
             Adicionar ao Carrinho
             <MdShoppingCart size={18} style={{marginLeft: "5px"}}/>
           </Button>
         </Description>
-
-
     </ShowComics>
   );
 };

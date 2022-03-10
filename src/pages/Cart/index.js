@@ -35,7 +35,7 @@ const Cart = () => {
   };
   let id = 0
   let subTotal = 0;
-  console.log(id)
+  console.log(cart.cart)
   Object.keys(cart.cart).map((key) => {
     const product = cart.cart[key];
     return Object.keys(product.prices).map((key) => {
@@ -60,23 +60,16 @@ const Cart = () => {
   return (
     <Container>
       <Navbar />
-      {id === 0 ? (
+    
         <ArrowLeft
           onClick={() => {
-            navigate("/allshop");
+            window.history.back();
           }}
         >
           <MdKeyboardBackspace />
         </ArrowLeft>
-      ) : (
-        <ArrowLeft
-          onClick={() => {
-            navigate("/description");
-          }}
-        >
-          <MdKeyboardBackspace />
-        </ArrowLeft>
-      )}
+    
+      
       {id === 0 ? (
         <Vazio>
           <h2>Oops...! Seu carrinho está vazio!</h2>
