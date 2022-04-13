@@ -9,7 +9,6 @@ import small from "../../assets/images/marvel-small.jpg";
 import large from "../../assets/images/marvel-large.jpg";
 
 const MainPage = () => {
-  console.log(window.screen.width)
   return (
     <Container>
       <Navbar />

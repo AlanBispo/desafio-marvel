@@ -8,7 +8,7 @@ import {
   Description,
   TitleImg,
   Button
-} from "../pages/AllShop/styles";
+} from "../Pages/AllShop/styles";
 
 import { useProduto } from "./DescriptionContext";
 import { useCart } from "./CartContext";
